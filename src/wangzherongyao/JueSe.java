@@ -1,16 +1,14 @@
 package wangzherongyao;
 
-import java.util.Scanner;
-
-
 /**
- * 
+ * <p>主要的类有JueSe和他的子类SheShou，ZhanShi和FaShi，还有个JiNeng接口。<br/>
+ * <p>基本属性包括生命值HP、魔法值MP、经验值Exp、等级lv、样子moYang、坐标x和y；<br/>
+ * 基本方法有发呆、移动、释放技能、得到经验值、扣血。
  * @author bin
  *
  */
-interface JiNeng{
-	void jiNeng(char[][] map,int bianChang,JueSe[] player);
-}
+
+import java.util.Scanner;
 
 public class JueSe implements JiNeng{
 	int hp;
@@ -77,10 +75,17 @@ public class JueSe implements JiNeng{
 	{
 		
 	}
+	/**
+	 * 得到角色血量
+	 * @return 血量
+	 */
 	public int getHp()
 	{
 		return hp;
 	}
+	/**
+	 * 展示角色模样和血量。
+	 */
 	public void show()
 	{
 		System.out.print(moYang);
@@ -88,6 +93,11 @@ public class JueSe implements JiNeng{
 		System.out.print(hp);
 		System.out.print(" ");
 	}
+	/**
+	 * <p>在提供的地图里移动并修改角色的坐标。
+	 * @param map 战场地图
+	 * @param bianChang 战场边长
+	 */
 	public void yiDong(char[][] map,int bianChang)
 	{
 		System.out.println("请输入方向和移动距离（u为上，d为下，l为左，r为右）:");
@@ -191,7 +201,11 @@ public class JueSe implements JiNeng{
 		}		
 	}
 }
-
+/**
+ * @inheritDoc
+ * <p>死了的角色就变为尸体，血量为0，不会扣血。
+ *
+ */
 class ShiTi extends JueSe implements JiNeng{
 	public ShiTi()
 	{
@@ -452,4 +466,8 @@ class FaShi extends JueSe implements JiNeng{
 			}
 		}
 	}
+}
+
+interface JiNeng{
+	void jiNeng(char[][] map,int bianChang,JueSe[] player);
 }
