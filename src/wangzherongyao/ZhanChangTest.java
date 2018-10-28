@@ -2,6 +2,7 @@ package wangzherongyao;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 class ZhanChangTest {
@@ -9,23 +10,26 @@ class ZhanChangTest {
 	@Test
 	void testSet() {
 		ZhanChang map=new ZhanChang();
-		map.set();
+		//map.set();
 		
 	}
 
 	@Test
 	void testChuLiZhiLing() {
-		fail("Not yet implemented");
+		ZhanChang map=new ZhanChang();
 	}
 
 	@Test
 	void testQingLiZhangAi() {
-		fail("Not yet implemented");
+		ZhanChang map=new ZhanChang();
+		map.map[3][3]='#';
+		map.qingLiZhangAi();
+		Assert.assertEquals('*', map.map[3][3]);
 	}
 
 	@Test
 	void testShow() {
-		fail("Not yet implemented");
+		ZhanChang map=new ZhanChang();
 	}
 
 }

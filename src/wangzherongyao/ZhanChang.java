@@ -7,7 +7,7 @@ package wangzherongyao;
  *
  */
 import java.util.Scanner;
-//import java.lang.*;
+
 
 public class ZhanChang {
 	char[][] map;
@@ -53,7 +53,7 @@ public class ZhanChang {
 			}
 			tag=1;
 		}
-		System.out.println("请输入玩家1的5个角色（S表示射手，Z表示战士，F表示法师）：");
+		System.out.println("请输入玩家2的5个角色（S表示射手，Z表示战士，F表示法师）：");
 		String s2=sc.next();
 		for(int a=0;a<5;a++)
 		{
