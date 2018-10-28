@@ -1,6 +1,8 @@
 package wangzherongyao;
 /**
- * 
+ * <p>主要的类有ZhanChang<br/>
+ * <p>基本属性包括地图map、地图边长bianChang、角色类数组player1和player2、当前玩家dangQianWanJia和当前角色dangQianJueSe;<br/>
+ * 基本方法有定义战场set()、处理玩家指令chuLiZhiLing()、清理障碍qingLiZhangAi()和战场展示show()。
  * @author bin
  *
  */
